@@ -2,7 +2,9 @@ package com.codecool.stock;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
@@ -11,18 +13,19 @@ import java.io.IOException;
  * Stock price service that gets prices from Yahoo.
  **/
 
-@Component
+@Service
 public class StockAPIService {
 
+    @Value("${stock.url}")
     private String apiPath;
+
     private RemoteURLReader remoteURLReader;
 
     /** Get stock price from iex and return as a double
      *  @param symbol Stock symbol, for example "aapl"
      **/
 
-    public StockAPIService(String url,RemoteURLReader reader){
-        this.apiPath = url;
+    public StockAPIService(RemoteURLReader reader){
         this.remoteURLReader = reader;
 
     }

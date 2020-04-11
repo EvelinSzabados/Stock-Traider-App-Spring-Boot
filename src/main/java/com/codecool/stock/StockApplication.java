@@ -1,5 +1,6 @@
 package com.codecool.stock;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +11,15 @@ import java.util.Scanner;
 @SpringBootApplication
 public class StockApplication {
 
+    @Autowired
+    Logger logger;
+    @Autowired
+    RemoteURLReader remoteURLReader;
+    @Autowired
+    Trader trader;
+    @Autowired
+    StockAPIService stockAPIService;
+
     public static void main(String[] args) {
         SpringApplication.run(StockApplication.class, args);
 
@@ -18,10 +28,8 @@ public class StockApplication {
     @PostConstruct
     public void start() {
 
-        Logger logger = new Logger();
         String url = "https://financialmodelingprep.com/api/v3/stock/real-time-price/%s";
-        StockAPIService stockApi = new StockAPIService(url,new RemoteURLReader());
-        Trader trader = new Trader(stockApi,logger);
+        stockAPIService = new StockAPIService(remoteURLReader);
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Enter a stock symbol (for example aapl):");
         String symbol = keyboard.nextLine();
