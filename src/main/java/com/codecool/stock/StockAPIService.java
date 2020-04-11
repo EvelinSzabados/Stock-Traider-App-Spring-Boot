@@ -2,6 +2,7 @@ package com.codecool.stock;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ public class StockAPIService {
     @Value("${stock.url}")
     private String apiPath;
 
+    @Autowired
     private RemoteURLReader remoteURLReader;
 
     /** Get stock price from iex and return as a double

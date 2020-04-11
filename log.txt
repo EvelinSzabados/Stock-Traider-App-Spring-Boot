@@ -4,3 +4,17 @@
 2020/04/11 16:15:38 Purchased stock!
 2020/04/11 16:32:24 Purchased aapl stock at $500.0, since its higher that the current price ($267.96)
 2020/04/11 16:32:24 Purchased stock!
+2020/04/11 16:33:40 Purchased aapl stock at $600.0, since its higher that the current price ($267.96)
+2020/04/11 16:33:40 Purchased stock!
+2020/04/11 16:35:18 Purchased aapl stock at $400.0, since its higher that the current price ($267.96)
+2020/04/11 16:35:18 Purchased stock!
+2020/04/11 16:47:08 There was an error while attempting to buy the stock: No value for price
+2020/04/11 16:47:38 There was an error while attempting to buy the stock: No value for price
+2020/04/11 16:47:40 There was an error while attempting to buy the stock: No value for price
+2020/04/11 16:47:52 There was an error while attempting to buy the stock: No value for price
+2020/04/11 17:21:06 Purchased aapl stock at $500.0, since its higher that the current price ($267.96)
+2020/04/11 17:21:06 Purchased stock!
+2020/04/11 17:21:23 Purchased aapl stock at $500.0, since its higher that the current price ($267.96)
+2020/04/11 17:24:15 Purchased aapl stock at $500.0, since its higher that the current price ($267.96)
+2020/04/11 17:24:15 Purchased aapl stock at $500.0, since its higher that the current price ($267.96)
+2020/04/11 17:24:49 Bid for aapl was $150.0 but the stock price is $267.96, no purchase was made.
